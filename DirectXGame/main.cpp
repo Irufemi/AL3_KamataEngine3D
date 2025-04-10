@@ -12,7 +12,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 	/// 初期化処理
 
 	// エンジンの初期化
-	KamataEngine::Initialize(L"LE1B_1_スエヒロ_コウイチ_AL3");
+	KamataEngine::Initialize(L"LE2B_1_スエヒロ_コウイチ_AL3");
 
 	// DirectXCommonインスタンスの取得
 	DirectXCommon* dxCommon = DirectXCommon::GetInstance();
