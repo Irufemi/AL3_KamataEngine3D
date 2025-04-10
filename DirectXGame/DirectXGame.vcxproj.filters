@@ -16,11 +16,27 @@
     <Filter Include="シェーダー ファイル">
       <UniqueIdentifier>{718c7f4c-fc51-40ad-a221-b9456a7a1a3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameScene">
+      <UniqueIdentifier>{0bbdbc1c-a5ff-48ca-a05f-e4d8be99372a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameScene\Player">
+      <UniqueIdentifier>{83c761fc-a469-4a4c-a9e0-6183dc17b053}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{309d47be-3a07-4229-a9a5-436bb1a4fd1f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="GameScene.cpp" />
-    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="GameScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>GameScene\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineMath.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Resources\shaders\SpritePS.hlsl">
@@ -72,7 +88,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameScene.h" />
-    <ClInclude Include="Player.h" />
+    <ClInclude Include="GameScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>GameScene\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineMath.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

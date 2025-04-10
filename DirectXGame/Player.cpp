@@ -1,5 +1,7 @@
 #include "Player.h"
 
+#include "EngineMath.h"
+
 #include <cassert>
 
 using namespace KamataEngine;
@@ -32,6 +34,10 @@ void Player::Initialize(Model* model, uint32_t textureHnadle, KamataEngine::Came
 
 // 更新
 void Player::Update() {
+
+	// アフィン変換行列の作成
+	worldTransform_.matWorld_ = MakeAffineMatrix(worldTransform_.scale_, worldTransform_.rotation_, worldTransform_.translation_);
+
 	// 行列を定数バッファに転送
 	worldTransform_.TransferMatrix();
 }
@@ -40,5 +46,4 @@ void Player::Update() {
 void Player::Draw() {
 	// 3Dモデルを描画
 	model_->Draw(worldTransform_, *camera_, textureHandle_);
-
 }
