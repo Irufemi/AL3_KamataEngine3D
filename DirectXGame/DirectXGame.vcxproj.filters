@@ -20,6 +20,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Resources\shaders\SpritePS.hlsl">
@@ -72,5 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameScene.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
 </Project>
